@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "256241990314",
+    "project_id": "open-sooq-2cecd",
+    "storage_bucket": "open-sooq-2cecd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:256241990314:android:1c3c5358318599667f2ed3",
+        "android_client_info": {
+          "package_name": "com.example.open_sooq"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "256241990314-4b7ak7o8jlm5vekb14ndskrp4tclpsml.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrw9b7pU0VO6LZmDxiIIvpEk3qm3_4xGI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "256241990314-4b7ak7o8jlm5vekb14ndskrp4tclpsml.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
