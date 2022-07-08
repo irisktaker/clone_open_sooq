@@ -22,8 +22,8 @@ class StartUpScreen extends StatefulWidget {
 class _StartUpScreenState extends State<StartUpScreen> {
   final _bloc = StartUpBloc();
   final StorageService _storageService = StorageService();
-  late List<StorageItemModel> _items;
-  bool _loading = true;
+  late List<StorageItemModel> items;
+  bool loading = true;
 
   @override
   void initState() {
@@ -33,8 +33,8 @@ class _StartUpScreenState extends State<StartUpScreen> {
   }
 
   void initList() async {
-    _items = await _storageService.readAllSecureData();
-    _loading = false;
+    items = await _storageService.readAllSecureData();
+    loading = false;
     setState(() {});
   }
 

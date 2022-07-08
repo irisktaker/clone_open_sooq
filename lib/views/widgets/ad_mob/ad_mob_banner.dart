@@ -30,14 +30,12 @@ class _AdMobBannerState extends State<AdMobBanner> {
         onAdFailedToLoad: (ad, err) {
           logErrorMessage("Failed to load a banner ad: ${err.message}");
           _isBannerAdReady = false;
-
           ad.dispose();
         },
       ),
     );
 
     _bannerAd.load();
-
     super.initState();
   }
 
@@ -58,8 +56,14 @@ class _AdMobBannerState extends State<AdMobBanner> {
             margin: const EdgeInsets.symmetric(
                 horizontal: SizeConfig.defaultPadding),
             decoration: BoxDecoration(
-              color: Colors.amber,
-              borderRadius: BorderRadius.circular(SizeConfig.defaultRadius),
+              color: Colors.amber[50],
+              borderRadius: BorderRadius.circular(SizeConfig.defaultRadius / 2),
+            ),
+            child: const Center(
+              child: Text(
+                "No Adds Available.",
+                style: TextStyle(fontSize: 16),
+              ),
             ),
           );
   }
