@@ -55,20 +55,8 @@ class _StartUpScreenState extends State<StartUpScreen> {
                       _bloc.languageSelectedIndex.value = value;
                       _bloc.refreshAppWithLanguageCode(
                         context,
-                        value == 0 ? "en" : "ar",
+                        value == 0 ? "en" : value == 1 ? "tr" : "ar",
                       );
-
-                      // final StorageItemModel? newItem = await StorageItemModel(
-                      //   context.toString(),
-                      //   _bloc.languageSelectedIndex.value.toString(),
-                      // );
-                      //
-                      // if (newItem != null) {
-                      //   _storageService.writeSecureData(newItem).then((value) {
-                      //     _loading = true;
-                      //   });
-                      //   initList();
-                      // }
                     },
                   ),
                 ),
@@ -80,7 +68,7 @@ class _StartUpScreenState extends State<StartUpScreen> {
                 fontWeight: FontWeight.bold,
               ),
               const SizedBox(height: 6),
-              ValueListenableBuilder<List<CountriesData>>(
+              ValueListenableBuilder<List<CountriesData>?>(
                 valueListenable: _bloc.listOfCountries,
                 builder: (context, snapshot, child) {
                   return ListOfCountries(

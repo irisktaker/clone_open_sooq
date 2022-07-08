@@ -20,13 +20,19 @@ class OptionsListView extends StatelessWidget {
     );
   }
 
-  _buildCustomContainer(Color iconBGColor, IconData icon, String title, [Widget? optionalChild]) {
+  _buildCustomContainer(Color iconBGColor, IconData icon, String title,
+      [Widget? optionalChild]) {
     return Container(
       height: list.length * 50,
       margin: const EdgeInsets.only(bottom: 10),
       padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-      decoration: BoxDecoration(color: AppColors.white, borderRadius: BorderRadius.circular(8),
-        boxShadow: const [BoxShadow(color: AppColors.greyColor, offset: Offset(1, 1), blurRadius: 4)],
+      decoration: BoxDecoration(
+        color: AppColors.white,
+        borderRadius: BorderRadius.circular(8),
+        boxShadow: const [
+          BoxShadow(
+              color: AppColors.greyColor, offset: Offset(1, 1), blurRadius: 4)
+        ],
       ),
       child: ListView.separated(
         itemCount: list.length,
@@ -36,7 +42,8 @@ class OptionsListView extends StatelessWidget {
         itemBuilder: (ctx, index) {
           return InkWell(
             onTap: () {
-              print(list[index].title);
+              //----
+              logInformationMessage(list[index].title);
             },
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -50,7 +57,8 @@ class OptionsListView extends StatelessWidget {
                         decoration: BoxDecoration(
                             color: list[index].iconsBGColor,
                             borderRadius: BorderRadius.circular(4)),
-                        child: Icon(list[index].icon, color: AppColors.white, size: 23)),
+                        child: Icon(list[index].icon,
+                            color: AppColors.white, size: 23)),
                     const SizedBox(width: 12),
                     CustomText(
                         title: list[index].title,

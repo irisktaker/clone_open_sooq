@@ -17,3 +17,7 @@ void logErrorMessage(String message) {
 void logInformationMessage(String message) {
   logger.i(message);
 }
+
+void logWTFMessage(String message) {
+  logger.wtf(message);
+}

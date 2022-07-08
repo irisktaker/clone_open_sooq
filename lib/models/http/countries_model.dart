@@ -52,3 +52,18 @@ class CountriesData {
     return data;
   }
 }
+
+
+// JSON
+// }
+//  "data": [
+//       {
+//          "id": 2,
+//           "flag_image": "https://www.countryflags.com/wp-content/uploads/jordan-flag-png-large.png",
+//           "name": "الاردن",
+//           "currency": "د.ا",
+//           "prefix_number": "00962"
+//       } 
+//    ],
+//  "message": "list of countries return successfully"
+// }

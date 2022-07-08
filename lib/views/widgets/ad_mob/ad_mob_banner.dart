@@ -28,8 +28,9 @@ class _AdMobBannerState extends State<AdMobBanner> {
           });
         },
         onAdFailedToLoad: (ad, err) {
-          print('Failed to load a banner ad: ${err.message}');
+          logErrorMessage("Failed to load a banner ad: ${err.message}");
           _isBannerAdReady = false;
+
           ad.dispose();
         },
       ),

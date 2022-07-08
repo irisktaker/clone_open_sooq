@@ -1,15 +1,15 @@
 // ignore_for_file: library_private_types_in_public_api
 
+import 'package:get/get.dart';
+import 'package:hive/hive.dart';
 import 'package:flutter/material.dart';
-
 import 'package:flutter/services.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:get/get.dart';
-import 'package:hive/hive.dart';
+
 import 'package:open_sooq/utils/hive_data/hive_constant.dart';
-import 'package:open_sooq/views/screens/btn_nav_bar/btn_nav_bar_screen.dart';
 import 'package:open_sooq/views/screens/start_up/start_up_screen.dart';
+import 'package:open_sooq/views/screens/btn_nav_bar/btn_nav_bar_screen.dart';
 
 import 'utils/constants/all_constants.dart';
 
@@ -24,11 +24,9 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   Locale? locale;
-  Box? storageBox;
+  late Box storageBox;
 
-  void setLocal(Locale value) {
-    setState(() => locale = value);
-  }
+  void setLocal(Locale value) => setState(() => locale = value);
 
   @override
   void initState() {
@@ -55,14 +53,15 @@ class _MyAppState extends State<MyApp> {
       supportedLocales: const [
         Locale('ar', ''),
         Locale('en', ''),
+        Locale('tr', ''),
       ],
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.system,
       theme: lightThemeMode,
       darkTheme: darkThemeMode,
-      home: storageBox!.get(DatabaseFieldConstants.countryId) != null
-          ? BtnNavBarScreen()
+      home: storageBox.get(DatabaseFieldConstants.countryId) != null
+          ? const BtnNavBarScreen()
           : const StartUpScreen(),
     );
   }

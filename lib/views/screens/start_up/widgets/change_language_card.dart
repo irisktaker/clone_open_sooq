@@ -40,7 +40,8 @@ class ChangeLanguageCard extends StatelessWidget {
             groupValue: languageSelectedIndex,
             children: {
               0: buildSegment("English", languageSelectedIndex == 0),
-              1: buildSegment("العربية", languageSelectedIndex == 1),
+              1: buildSegment("Turkish", languageSelectedIndex == 1),
+              2: buildSegment("العربية", languageSelectedIndex == 2),
             },
             onValueChanged: (value) {
               valueChanged(value!);
