@@ -7,7 +7,7 @@ import 'package:country_pickers/country_pickers.dart';
 
 import 'package:open_sooq/utils/custom_text_style.dart';
 import 'package:open_sooq/views/widgets/custom_button_2.dart';
-import 'package:open_sooq/views/screens/auth/login/login_third_step/login_third_step.dart';
+import 'package:open_sooq/views/screens/auth/login/login_third_step/login_third_step_screen.dart';
 
 class LoginSecondStepScreen extends StatelessWidget {
   LoginSecondStepScreen({Key? key}) : super(key: key);
@@ -105,9 +105,10 @@ class LoginSecondStepScreen extends StatelessWidget {
                   CustomButton2(
                     enableButton:
                         _phoneNumberController.text.isNotEmpty ? true : false,
-                    onTap: () => Get.to(LoginThirdStep(
-                        countryCode: countryCode,
-                        mobileNumber: _phoneNumberController.text,)),
+                    onTap: () => Get.to(LoginThirdStepScreen(
+                      countryCode: countryCode,
+                      mobileNumber: _phoneNumberController.text,
+                    )),
                     buttonTitle: "Verify",
                   ),
                 ],

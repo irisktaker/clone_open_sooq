@@ -1,7 +1,10 @@
 import 'package:banner_carousel/banner_carousel.dart';
+import 'package:flutter/material.dart';
 import 'package:open_sooq/models/banner_images_model.dart';
 
 class HomeBloc {
+  TextEditingController searchController = TextEditingController();
+
   List<BannerModel> listBanners = [
     BannerModel(
         imagePath:

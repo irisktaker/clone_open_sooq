@@ -21,7 +21,6 @@ class _BtnNavBarScreenState extends State<BtnNavBarScreen> {
 
   @override
   void initState() {
-    super.initState();
     ShakeDetector detector = ShakeDetector.autoStart(
       onPhoneShake: () async {
         if (AppVariables.isContactUsDialogOpen == false) {
@@ -38,6 +37,7 @@ class _BtnNavBarScreenState extends State<BtnNavBarScreen> {
     // To close: detector.stopListening();
     // ShakeDetector.waitForStart() waits for user to call detector.startListening();
     detector.startListening();
+    super.initState();
   }
 
   @override

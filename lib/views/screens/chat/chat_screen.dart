@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:open_sooq/views/screens/chat/chat_bloc.dart';
-import 'package:open_sooq/views/screens/chat/widget/build_search.dart';
+import 'package:open_sooq/views/screens/chat/widget/chat_search_bar.dart';
 import 'package:open_sooq/views/screens/chat/widget/chats_view.dart';
 
 class ChatScreen extends StatelessWidget {
@@ -10,13 +10,17 @@ class ChatScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.white,
-      child: Column(
-        children: [
-          BuildCustomSearch(_chatBloc),
-          ChatView(_chatBloc),
-        ],
+    return GestureDetector(
+      onTap: () => FocusScope.of(context).unfocus(),
+      child: Container(
+        color: Colors.white,
+        padding: const EdgeInsets.symmetric(horizontal: 16),
+        child: Column(
+          children: [
+            ChatSearchBar(_chatBloc),
+            ChatView(_chatBloc),
+          ],
+        ),
       ),
     );
   }

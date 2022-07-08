@@ -1,5 +1,7 @@
 // ignore_for_file: must_be_immutable
 
+import 'dart:async';
+
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 
@@ -8,20 +10,51 @@ import 'package:open_sooq/utils/constants/all_constants.dart';
 import 'package:open_sooq/views/screens/btn_nav_bar/btn_nav_bar_screen.dart';
 import 'package:open_sooq/views/widgets/custom_button_2.dart';
 
-class LoginThirdStep extends StatelessWidget {
-  LoginThirdStep(
+class LoginThirdStepScreen extends StatefulWidget {
+  LoginThirdStepScreen(
       {Key? key, required this.countryCode, required this.mobileNumber})
       : super(key: key);
 
   String countryCode = "";
   String mobileNumber = "";
 
+  @override
+  State<LoginThirdStepScreen> createState() => _LoginThirdStepScreenState();
+}
+
+class _LoginThirdStepScreenState extends State<LoginThirdStepScreen> {
   final TextEditingController _controller = TextEditingController();
+
+  Timer? _timer;
+  int _start = 60;
+
+  void startTimer() {
+    const oneSec = Duration(seconds: 1);
+    _timer = Timer.periodic(oneSec, (Timer timer) {
+      if (_start == 0) {
+        setState(() => timer.cancel());
+      } else {
+        setState(() => _start--);
+      }
+    });
+  }
+
+  @override
+  void initState() {
+    startTimer();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _timer!.cancel();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
-    logWTFMessage(countryCode);
-    logWTFMessage(mobileNumber);
+    logWTFMessage(widget.countryCode);
+    logWTFMessage(widget.mobileNumber);
 
     return GestureDetector(
       onTap: () => FocusScope.of(context).unfocus(),
@@ -73,11 +106,17 @@ class LoginThirdStep extends StatelessWidget {
                       cursorColor: Colors.black,
                       textAlign: TextAlign.center,
                       keyboardType: TextInputType.number,
-                      // maxLength: 6,
+                      maxLength: 6,
                       decoration: const InputDecoration(
                         border: InputBorder.none,
                         hintText: "Enter OTP Code",
                       ),
+                      onSubmitted: (value) {
+                        if (value.length == 5) {
+                          /// TODO:
+                          Get.to(const BtnNavBarScreen());
+                        }
+                      },
                     ),
                   ),
                   const SizedBox(height: 16),
@@ -86,6 +125,29 @@ class LoginThirdStep extends StatelessWidget {
                     onTap: () => Get.to(const BtnNavBarScreen()),
                     buttonTitle: "Verify",
                   ),
+                  const SizedBox(height: 16),
+                  _start == 0
+                      ? TextButton(
+                          onPressed: () {
+                            setState(() {
+                              /// TODO:
+                              // startTimer();
+                            });
+                          },
+                          child: Text(
+                            "Reset Code",
+                            style: TextStyle(
+                              color: Colors.grey[700]!,
+                              fontSize: 16,
+                            ),
+                          ),
+                        )
+                      : CustomText(
+                          title: "00:$_start",
+                          fontSize: 16,
+                          fontColor:
+                              _start > 30 ? Colors.grey[700]! : Colors.red,
+                        ),
                 ],
               ),
             ),

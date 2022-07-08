@@ -47,18 +47,21 @@ class HomeCategoryWidget extends StatelessWidget {
           height: 90,
           child: Stack(
             children: [
-              Container(
-                padding: const EdgeInsets.only(left: 10, top: 10, bottom: 10),
-                decoration: const BoxDecoration(
-                  shape: BoxShape.circle,
-                ),
-                child: FittedBox(
-                  fit: BoxFit.contain,
-                  child: CircleAvatar(
-                    radius: 40,
-                    backgroundColor: Colors.white,
-                    backgroundImage: NetworkImage(
-                      bloc.listOfBanners[index].image,
+              InkWell(
+                onTap: () => print(index),
+                child: Container(
+                  padding: const EdgeInsets.only(left: 10, top: 10, bottom: 10),
+                  decoration: const BoxDecoration(
+                    shape: BoxShape.circle,
+                  ),
+                  child: FittedBox(
+                    fit: BoxFit.contain,
+                    child: CircleAvatar(
+                      radius: 40,
+                      backgroundColor: Colors.white,
+                      backgroundImage: NetworkImage(
+                        bloc.listOfBanners[index].image,
+                      ),
                     ),
                   ),
                 ),
