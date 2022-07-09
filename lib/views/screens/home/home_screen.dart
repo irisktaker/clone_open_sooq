@@ -20,7 +20,7 @@ class HomeScreen extends StatelessWidget {
         children: [
           HomeSearchBar(_homeBloc),
           HomeBannerWidget(bloc: _homeBloc),
-          HomeCategoryWidget(bloc: _homeBloc),
+          HomeCategoryWidget(homeBloc: _homeBloc),
           const SizedBox(height: 16),
           const AdMobBanner(),
           const SizedBox(height: 16),

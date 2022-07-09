@@ -22,67 +22,72 @@ class HomeBloc {
         id: "4"),
   ];
 
-  List<BannerImagesModel> listOfBanners = [
-    BannerImagesModel(
+  List<CategoriesModel> listOfCategories = [
+    CategoriesModel(
+      image:
+          "https://i.pinimg.com/originals/c7/67/c0/c767c01df6f9036a8e8ea256b41267bc.png",
+      name: "All",
+    ),
+    CategoriesModel(
       image:
           "https://stimg.cardekho.com/images/carexteriorimages/930x620/Lamborghini/Aventador/6721/Lamborghini-Aventador-SVJ/1621849426405/front-left-side-47.jpg?tr=w-375",
       name: "Cars",
     ),
-    BannerImagesModel(
+    CategoriesModel(
       image:
           "https://mccoymart.com/post/wp-content/uploads/2020/03/Home-Design-and-Plans-According-to-Vastu-Shastra-370x200.jpg",
       name: "Home",
     ),
-    BannerImagesModel(
+    CategoriesModel(
       image:
           "https://www.lux-review.com/wp-content/uploads/2021/09/Motorbike.jpg",
       name: "Motors",
       badge: true,
     ),
-    BannerImagesModel(
+    CategoriesModel(
       image:
           "https://blogs.cdc.gov/wp-content/uploads/sites/6/2020/05/golden_retiver_cat_cropped.jpg",
       name: "pets",
     ),
-    BannerImagesModel(
+    CategoriesModel(
       image:
           "https://media.istockphoto.com/photos/quantum-computing-concept-abstract-glowing-electronic-circuit-picture-id1186902469?k=20&m=1186902469&s=612x612&w=0&h=SNa0XsJ84fz8Vuevij9oFLKUnC2Qn1I3pXYVJXLsLWE=",
       name: "Electronics",
       badge: true,
     ),
-    BannerImagesModel(
+    CategoriesModel(
       image:
           "https://media.istockphoto.com/photos/gamer-work-space-concept-top-view-a-gaming-gear-mouse-keyboard-in-picture-id1170073824?k=20&m=1170073824&s=612x612&w=0&h=lQYUGw9IIqI9bsTrIrS8xCyId2PmmNYPSwB7UNEzssI=",
       name: "Games",
     ),
-    BannerImagesModel(
+    CategoriesModel(
       image:
           "https://media.istockphoto.com/photos/hammer-picture-id183759696?k=20&m=183759696&s=612x612&w=0&h=DRDKhrKEkSMcwMyYN_CnXpC9rhpr6ijtySRDw2Nedxw=",
       name: "Jobs",
     ),
-    BannerImagesModel(
+    CategoriesModel(
       image:
           "https://cdn.pixabay.com/photo/2015/11/03/08/56/service-1019821__340.jpg",
       name: "Services",
       badge: true,
     ),
-    BannerImagesModel(
+    CategoriesModel(
       image:
           "https://img.freepik.com/free-photo/big-hamburger-with-double-beef-french-fries_252907-8.jpg?w=2000",
       name: "Food",
     ),
-    BannerImagesModel(
+    CategoriesModel(
       image:
           "https://img.freepik.com/free-photo/sports-tools_53876-138077.jpg?w=2000",
       name: "Sport",
     ),
-    BannerImagesModel(
+    CategoriesModel(
       image:
           "https://img.freepik.com/free-photo/front-view-stacked-books-graduation-cap-diploma-education-day_23-2149241011.jpg?w=2000",
       name: "Education",
       badge: true,
     ),
-    BannerImagesModel(
+    CategoriesModel(
       image:
           "https://media.istockphoto.com/photos/trendy-lady-adjusting-hair-picture-id1169378200?k=20&m=1169378200&s=612x612&w=0&h=8Ao5aaeygCABOz0AApKsZhjiHxpS7QNsB92rk_DjGW4=",
       name: "Fashions",

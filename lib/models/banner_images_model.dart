@@ -1,6 +1,7 @@
-class BannerImagesModel {
+class CategoriesModel {
   final String image, name;
   bool badge;
 
-  BannerImagesModel({required this.image, required this.name, this.badge = false});
+  CategoriesModel(
+      {required this.image, required this.name, this.badge = false});
 }

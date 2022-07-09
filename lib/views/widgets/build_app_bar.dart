@@ -7,8 +7,6 @@ import 'package:open_sooq/views/screens/settings/settings_screen.dart';
 import 'package:open_sooq/views/screens/notifications/notifications_screen.dart';
 
 PreferredSizeWidget buildAppBar(BuildContext context, String title, int index) {
-  Size size = MediaQuery.of(context).size;
-
   return AppBar(
     toolbarHeight: 70,
     automaticallyImplyLeading: false,
