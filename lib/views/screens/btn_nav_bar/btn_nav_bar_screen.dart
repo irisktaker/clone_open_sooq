@@ -1,3 +1,4 @@
+import 'package:get/get.dart';
 import 'package:shake/shake.dart';
 import 'package:flutter/material.dart';
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
@@ -6,6 +7,8 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:open_sooq/utils/constants/variables.dart';
 import 'package:open_sooq/views/widgets/build_app_bar.dart';
 import 'package:open_sooq/views/widgets/contact_bottom_sheet.dart';
+import 'package:open_sooq/utils/shared/methods/shared_methods.dart';
+import 'package:open_sooq/views/screens/auth/login/login_first_step/login_first_step_screen.dart';
 
 import 'btn_nav_bar_bloc.dart';
 
@@ -25,7 +28,8 @@ class _BtnNavBarScreenState extends State<BtnNavBarScreen> {
       onPhoneShake: () async {
         if (AppVariables.isContactUsDialogOpen == false) {
           AppVariables.isContactUsDialogOpen = true;
-          await contactBottomSheet(context).whenComplete(() => AppVariables.isContactUsDialogOpen = false);
+          await contactBottomSheet(context)
+              .whenComplete(() => AppVariables.isContactUsDialogOpen = false);
         }
       },
       minimumShakeCount: 1,
@@ -80,7 +84,14 @@ class _BtnNavBarScreenState extends State<BtnNavBarScreen> {
               ),
             ],
             initialActiveIndex: 0,
-            onTap: (int index) => _bloc.currentTabIndexNotifier.value = index,
+            onTap: (int index) {
+              _bloc.currentTabIndexNotifier.value = index;
+              if (!SharedMethods.checkIfUserLoggedIn() && index == 1 ||
+                  index == 2 ||
+                  index == 3) {
+                Get.to(const LoginFirstStepScreen());
+              }
+            },
           ),
         );
       },

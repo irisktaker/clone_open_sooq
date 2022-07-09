@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart'; 
 
 import '../adds/adds_screen.dart';
 import '../chat/chat_screen.dart';
@@ -31,5 +31,5 @@ class BtnNavBarBloc {
       default:
         return "";
     }
-  }
+  } 
 }

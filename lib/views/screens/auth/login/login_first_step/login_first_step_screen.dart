@@ -4,6 +4,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 import 'package:open_sooq/utils/custom_text_style.dart';
 import 'package:open_sooq/views/widgets/custom_button_2.dart';
+import 'package:open_sooq/views/screens/btn_nav_bar/btn_nav_bar_screen.dart';
 
 import '../login_second_step/login_second_step_screen.dart';
 
@@ -19,7 +20,24 @@ class LoginFirstStepScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Image.asset("assets/images/logo-tv-logo.png", scale: 3),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const SizedBox(width: 30, height: 30),
+                  Image.asset("assets/images/logo-tv-logo.png", scale: 3),
+                  SizedBox(
+                    width: 30,
+                    height: 30,
+                    child: IconButton(
+                      onPressed: () => Get.to(const BtnNavBarScreen()),
+                      icon: const Icon(
+                        Icons.close,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
               Image.asset("assets/images/login_1.png"),
               const CustomText(
                 title: "Login",

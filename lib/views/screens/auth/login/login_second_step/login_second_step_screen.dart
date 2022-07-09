@@ -68,6 +68,7 @@ class LoginSecondStepScreen extends StatelessWidget {
                           width: MediaQuery.of(context).size.width * 0.26,
                           child: CountryPickerDropdown(
                             initialValue: 'JO',
+                            iconSize: 16,
                             itemBuilder: _buildDropdownItem,
                             priorityList: [
                               CountryPickerUtils.getCountryByIsoCode('GB'),
@@ -91,6 +92,7 @@ class LoginSecondStepScreen extends StatelessWidget {
                             controller: _phoneNumberController,
                             cursorColor: Colors.black,
                             textAlign: TextAlign.center,
+                            textAlignVertical: TextAlignVertical.bottom,
                             keyboardType: TextInputType.number,
                             decoration: const InputDecoration(
                               border: InputBorder.none,
@@ -124,7 +126,12 @@ class LoginSecondStepScreen extends StatelessWidget {
         children: <Widget>[
           CountryPickerUtils.getDefaultFlagImage(country),
           const SizedBox(width: 8.0),
-          Text("+${country.phoneCode}"),
+          Text(
+            "+${country.phoneCode}",
+            style: const TextStyle(
+              fontSize: 12,
+            ),
+          ),
         ],
       );
 }
