@@ -28,10 +28,3 @@ void main() async {
 
   runApp(const MyApp());
 }
-
-/// TODO :
-/// More about Exceptions
-/// More about Localization
-/// Save selected language and country - Hive or Secure Storage
-/// Profile Page
-/// AdMob

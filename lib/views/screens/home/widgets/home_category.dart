@@ -7,6 +7,7 @@ import 'package:open_sooq/utils/custom_text_style.dart';
 import 'package:open_sooq/models/banner_images_model.dart';
 import 'package:open_sooq/views/screens/home/home_bloc.dart';
 import 'package:open_sooq/views/screens/filter/filter_screen.dart';
+import 'package:open_sooq/views/screens/start_up/widgets/list_of_countries.dart';
 
 class HomeCategoryWidget extends StatelessWidget {
   HomeCategoryWidget({required this.homeBloc, Key? key}) : super(key: key);
@@ -50,7 +51,7 @@ class HomeCategoryWidget extends StatelessWidget {
         InkWell(
           onTap: () {
             if (item.name == "All") {
-              Get.to(const FilterScreen());
+              Get.to(FilterScreen(listOfCategories: homeBloc.listOfCategories));
             }
           },
           child: SizedBox(
