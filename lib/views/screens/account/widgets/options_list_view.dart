@@ -1,7 +1,7 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:flutter/material.dart';
-import 'package:open_sooq/models/options_list_model.dart';
+import 'package:open_sooq/data/models/options_list_model.dart';
 import 'package:open_sooq/utils/constants/all_constants.dart';
 import 'package:open_sooq/utils/custom_text_style.dart';
 

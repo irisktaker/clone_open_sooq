@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 
-import 'package:open_sooq/models/banner_images_model.dart';
+import 'package:open_sooq/data/models/banner_images_model.dart';
 import 'package:open_sooq/views/widgets/build_app_bar.dart';
 import 'package:open_sooq/views/screens/filter/widgets/cities_bottom_sheet.dart';
 import 'package:open_sooq/views/screens/filter/widgets/categories_bottom_sheet.dart';

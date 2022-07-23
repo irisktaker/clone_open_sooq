@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-import 'package:open_sooq/models/chats_model.dart';
+import 'package:open_sooq/data/models/chats_model.dart';
 
 class ChatBloc {
   TextEditingController searchController = TextEditingController();

@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:get/state_manager.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-import 'package:open_sooq/services/secure_service.dart';
 import 'package:open_sooq/utils/custom_text_style.dart';
-import 'package:open_sooq/models/storage_item_model.dart';
-import 'package:open_sooq/models/http/countries_model.dart';
 import 'package:open_sooq/utils/constants/all_constants.dart';
+import 'package:open_sooq/data/models/storage_item_model.dart';
+import 'package:open_sooq/data/services/secure/secure_service.dart';
+import 'package:open_sooq/data/models/http/country/countries_model.dart';
 import 'package:open_sooq/views/screens/start_up/widgets/list_of_countries.dart';
 import 'package:open_sooq/views/screens/start_up/widgets/change_language_card.dart';
 

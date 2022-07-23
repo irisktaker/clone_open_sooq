@@ -2,7 +2,7 @@ import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 
 import 'package:open_sooq/utils/custom_text_style.dart';
-import 'package:open_sooq/models/banner_images_model.dart';
+import 'package:open_sooq/data/models/banner_images_model.dart';
 import 'package:open_sooq/utils/constants/all_constants.dart';
 import 'package:open_sooq/views/screens/filter/widgets/filter_search_bar.dart';
 

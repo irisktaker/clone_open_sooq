@@ -1,11 +1,11 @@
 import 'package:get/get.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 import 'package:open_sooq/app.dart';
-import 'package:open_sooq/services/filter_service.dart';
 import 'package:open_sooq/utils/singleton/singleton.dart';
-import 'package:open_sooq/models/http/countries_model.dart';
 import 'package:open_sooq/utils/constants/all_constants.dart';
+import 'package:open_sooq/data/services/filter/filter_service.dart';
+import 'package:open_sooq/data/models/http/country/countries_model.dart';
 
 class StartUpBloc {
   RxInt languageSelectedIndex = 0.obs;

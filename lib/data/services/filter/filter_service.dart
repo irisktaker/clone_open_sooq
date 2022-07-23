@@ -1,5 +1,5 @@
-import 'package:open_sooq/api/http_request.dart';
-import 'package:open_sooq/models/http/countries_model.dart';
+import 'package:open_sooq/data/api/http_request.dart';
+import 'package:open_sooq/data/models/http/country/countries_model.dart';
 import 'package:open_sooq/utils/constants/all_constants.dart';
 
 class FilterService {

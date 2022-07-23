@@ -1,16 +1,17 @@
 import 'package:dio/dio.dart';
-import 'package:open_sooq/services/network_info_service.dart';
 import 'package:open_sooq/utils/singleton/singleton.dart';
+import 'package:open_sooq/data/services/network/network_info_service.dart';
 
 enum RequestType { get, post, put, delete }
 
 class HttpRepository {
-  Future<dynamic> callRequest(
-      {required RequestType requestType,
-      required String methodName,
-      Map<String, dynamic> queryParam = const {},
-      Map<String, dynamic>? postBody,
-      String contentType = Headers.jsonContentType}) async {
+  Future<dynamic> callRequest({
+    required RequestType requestType,
+    required String methodName,
+    Map<String, dynamic> queryParam = const {},
+    Map<String, dynamic>? postBody,
+    String contentType = Headers.jsonContentType,
+  }) async {
     Response response;
     const baseUrl = 'https://rental-apis.herokuapp.com/';
 

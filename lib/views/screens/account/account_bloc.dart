@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:open_sooq/models/options_list_model.dart';
+import 'package:open_sooq/data/models/options_list_model.dart';
 
 class AccountBloc {
   List<OptionsListModel> list1 = [

@@ -2,7 +2,7 @@
 // reading, writing, and deleting data from secured storage
 
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-import 'package:open_sooq/models/storage_item_model.dart';
+import 'package:open_sooq/data/models/storage_item_model.dart';
 
 class StorageService {
   final _secureStorage = const FlutterSecureStorage();

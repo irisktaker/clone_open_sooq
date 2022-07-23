@@ -3,9 +3,9 @@ import 'package:hive/hive.dart';
 import 'package:flutter/material.dart';
 
 import 'package:open_sooq/utils/custom_text_style.dart';
-import 'package:open_sooq/models/http/countries_model.dart';
 import 'package:open_sooq/utils/constants/all_constants.dart';
 import 'package:open_sooq/utils/hive_data/hive_constant.dart';
+import 'package:open_sooq/data/models/http/country/countries_model.dart';
 import 'package:open_sooq/views/screens/btn_nav_bar/btn_nav_bar_screen.dart';
 
 class ListOfCountries extends StatelessWidget {
